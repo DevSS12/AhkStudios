@@ -5,22 +5,28 @@
 <title>AHK AutoClicker</title>
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: #020617;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
   color: white;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 25px 60px;
   align-items: center;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -28,40 +34,45 @@ header {
   color: #00f5d4;
 }
 
-.btn-download {
-  background: #00f5d4;
-  border: none;
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.download {
+  background: linear-gradient(135deg, #00f5d4, #00c2a8);
   padding: 12px 25px;
-  border-radius: 12px;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
   font-weight: bold;
 }
 
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
-  padding: 80px;
+  padding: 80px 100px;
   align-items: center;
 }
 
-.text h1 {
-  font-size: 60px;
+.left h1 {
+  font-size: 70px;
 }
 
-.text span {
+.left h1 span {
   color: #00f5d4;
 }
 
-.text p {
+.left p {
   color: #94a3b8;
+  margin: 20px 0;
 }
 
-.features {
-  margin-top: 20px;
-}
-
-.features div {
+.list div {
   margin: 10px 0;
+  color: #cbd5f5;
 }
 
 .buttons {
@@ -69,15 +80,16 @@ header {
 }
 
 .btn {
-  padding: 15px 25px;
-  border-radius: 12px;
+  padding: 15px 30px;
+  border-radius: 15px;
   border: none;
-  margin-right: 10px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .primary {
   background: #00f5d4;
+  color: black;
 }
 
 .secondary {
@@ -86,38 +98,59 @@ header {
   color: white;
 }
 
+/* MOCKUP */
 .mockup {
-  background: #020617;
-  border: 1px solid #00f5d4;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 20px;
-  box-shadow: 0 0 40px rgba(0,255,200,0.2);
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,255,200,0.2);
+  box-shadow: 0 0 80px rgba(0,255,200,0.2);
 }
 
 .mockup img {
-  width: 500px;
-  border-radius: 10px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 80px;
-}
-
-.card {
-  background: #0f172a;
-  padding: 20px;
+  width: 600px;
   border-radius: 15px;
-  width: 200px;
-  text-align: center;
-  border: 1px solid #1e293b;
 }
 
+/* FEATURES BAR */
+.bar {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #020617;
+  border: 1px solid #0f172a;
+}
+
+.bar div {
+  text-align: center;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px;
+  padding: 40px;
+  border-radius: 20px;
+  background: #020617;
+  border: 1px solid #0f172a;
+  align-items: center;
+}
+
+.cta button {
+  background: #00f5d4;
+  padding: 20px 40px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 30px;
   color: #64748b;
 }
 </style>
@@ -128,20 +161,25 @@ footer {
 
 <header>
   <div class="logo">AHK <span>AutoClicker</span></div>
-  <button class="btn-download">Baixar Agora</button>
+  <div class="nav">
+    <span>Recursos</span>
+    <span>Como funciona</span>
+    <span>Changelog</span>
+    <button class="download">Baixar Agora</button>
+  </div>
 </header>
 
 <section class="hero">
 
-  <div class="text">
+  <div class="left">
     <h1>AHK <span>AutoClicker</span></h1>
-    <p>Precisão, performance e controle total.</p>
+    <p>Precisão, performance e controle total em um só lugar.</p>
 
-    <div class="features">
-      <div>✔ Clique de alta precisão</div>
+    <div class="list">
+      <div>✔ Clique com alta precisão</div>
       <div>✔ Configurações avançadas</div>
       <div>✔ Seguro e leve</div>
-      <div>✔ Atualizações constantes</div>
+      <div>✔ Sistema em evolução</div>
     </div>
 
     <div class="buttons">
@@ -151,17 +189,24 @@ footer {
   </div>
 
   <div class="mockup">
-    <!-- COLOCA SUA IMAGEM AQUI -->
     <img src="SEU_PRINT.png">
   </div>
 
 </section>
 
-<section class="cards">
-  <div class="card">🛡️ Seguro</div>
-  <div class="card">⚡ Alta performance</div>
-  <div class="card">⚙️ Configurável</div>
-  <div class="card">🔄 Atualizado</div>
+<section class="bar">
+  <div>🛡️ Seguro</div>
+  <div>⚡ Alta performance</div>
+  <div>⚙️ Configurável</div>
+  <div>🔄 Atualizado</div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Pronto para ter o controle total?</h2>
+    <p>Junte-se a milhares de usuários.</p>
+  </div>
+  <button>Baixar Agora</button>
 </section>
 
 <footer>
