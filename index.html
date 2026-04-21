@@ -25,22 +25,30 @@ header{
 }
 
 .logo{
-  font-size:20px;
+  font-size:22px;
+  font-weight:700;
 }
 .logo span{color:#00f5d4;}
 
+.top-right{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
 .status{
-  background:#00f5d4;
+  background:linear-gradient(135deg,#00f5d4,#00c2a8);
+  padding:10px 25px;
+  border-radius:30px;
   color:black;
-  padding:10px 20px;
-  border-radius:20px;
+  font-weight:600;
 }
 
 /* LAYOUT */
 .container{
   display:flex;
-  padding:30px;
   gap:20px;
+  padding:30px;
 }
 
 /* LEFT PANEL */
@@ -53,12 +61,13 @@ header{
   box-shadow:0 0 40px rgba(0,255,200,0.08);
 }
 
-.section-title{
+.title{
   margin-bottom:20px;
+  font-weight:600;
   color:#cbd5f5;
 }
 
-/* BUTTONS */
+/* KEY BUTTONS */
 .keys button{
   background:#0f172a;
   border:1px solid #1e293b;
@@ -66,7 +75,6 @@ header{
   padding:10px 15px;
   margin-right:10px;
   border-radius:10px;
-  cursor:pointer;
 }
 
 .keys .active{
@@ -76,16 +84,21 @@ header{
 
 /* SLIDER */
 .slider{
-  margin-top:20px;
+  margin-top:25px;
 }
 
-input[type=range]{
+.slider input{
   width:100%;
 }
 
-/* MOUSE BUTTON */
+.cps{
+  font-size:28px;
+  margin-top:10px;
+}
+
+/* MOUSE */
 .mouse{
-  margin-top:20px;
+  margin-top:25px;
 }
 
 .mouse button{
@@ -111,7 +124,7 @@ input[type=range]{
 
 .box{
   flex:1;
-  padding:20px;
+  padding:25px;
   border-radius:15px;
   background:#020617;
   border:1px solid #1e293b;
@@ -132,17 +145,16 @@ input[type=range]{
   padding:20px;
 }
 
-.log{
-  font-size:14px;
-  color:#94a3b8;
-}
-
 .log h3{
-  color:white;
   margin-bottom:10px;
 }
 
-/* FOOTER */
+.log ul{
+  color:#94a3b8;
+  margin-left:20px;
+}
+
+/* BOTTOM BAR */
 .footer{
   margin:30px;
   padding:20px;
@@ -159,14 +171,19 @@ input[type=range]{
 
 <header>
   <div class="logo">AHK <span>AutoClicker</span></div>
-  <div class="status">Sistema Ativo</div>
+
+  <div class="top-right">
+    <span>PT</span>
+    <span>EN</span>
+    <div class="status">SISTEMA ATIVO</div>
+  </div>
 </header>
 
 <div class="container">
 
   <!-- LEFT -->
   <div class="left">
-    <div class="section-title">CONFIGURAÇÕES OPERACIONAIS</div>
+    <div class="title">CONFIGURAÇÕES OPERACIONAIS</div>
 
     <div class="keys">
       <button class="active">F6</button>
@@ -176,7 +193,8 @@ input[type=range]{
     </div>
 
     <div class="slider">
-      <p>CPS: 12</p>
+      <p>INTENSIDADE DE CLIQUES</p>
+      <div class="cps">12 CPS</div>
       <input type="range" min="1" max="200">
     </div>
 
@@ -188,11 +206,10 @@ input[type=range]{
     </div>
 
     <div class="actions">
-      <div class="box">Humanização (Jitter)</div>
-      <div class="box">Restaurar padrão</div>
+      <div class="box">Humanização</div>
+      <div class="box">Restaurar</div>
       <div class="box danger">Desinstalar</div>
     </div>
-
   </div>
 
   <!-- RIGHT -->
@@ -215,7 +232,7 @@ input[type=range]{
   <div>🛡 Sistema protegido</div>
   <div>⚡ Motor de cliques</div>
   <div>🧠 Desempenho</div>
-  <div>💾 Configs seguras</div>
+  <div>💾 Configurações seguras</div>
 </div>
 
 </body>
