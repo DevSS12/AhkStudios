@@ -1,98 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Vortex Client</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>AHK AutoClicker</title>
 
-    header {
-      padding: 40px;
-      font-size: 32px;
-      font-weight: bold;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #020617;
+  color: white;
+}
 
-    .container {
-      margin-top: 100px;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
 
-    .title {
-      font-size: 50px;
-      font-weight: bold;
-    }
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    .subtitle {
-      color: #94a3b8;
-      margin: 20px;
-    }
+.logo span {
+  color: #00f5d4;
+}
 
-    .download-btn {
-      background: #22c55e;
-      padding: 15px 30px;
-      border-radius: 12px;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.btn-download {
+  background: #00f5d4;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .download-btn:hover {
-      background: #16a34a;
-      transform: scale(1.05);
-    }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  align-items: center;
+}
 
-    .features {
-      margin-top: 100px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
+.text h1 {
+  font-size: 60px;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 15px;
-      width: 200px;
-    }
+.text span {
+  color: #00f5d4;
+}
 
-    footer {
-      margin-top: 100px;
-      padding: 20px;
-      color: #64748b;
-    }
-  </style>
+.text p {
+  color: #94a3b8;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.features div {
+  margin: 10px 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #00f5d4;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #334155;
+  color: white;
+}
+
+.mockup {
+  background: #020617;
+  border: 1px solid #00f5d4;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(0,255,200,0.2);
+}
+
+.mockup img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 80px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #1e293b;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>Vortex Client</header>
+<header>
+  <div class="logo">AHK <span>AutoClicker</span></div>
+  <button class="btn-download">Baixar Agora</button>
+</header>
 
-<div class="container">
-  <div class="title">O melhor AutoClicker</div>
-  <div class="subtitle">Rápido, leve e configurável</div>
+<section class="hero">
 
-  <button class="download-btn" onclick="download()">Baixar Agora</button>
-</div>
+  <div class="text">
+    <h1>AHK <span>AutoClicker</span></h1>
+    <p>Precisão, performance e controle total.</p>
 
-<div class="features">
-  <div class="card">⚡ Alto desempenho</div>
-  <div class="card">🎯 CPS configurável</div>
+    <div class="features">
+      <div>✔ Clique de alta precisão</div>
+      <div>✔ Configurações avançadas</div>
+      <div>✔ Seguro e leve</div>
+      <div>✔ Atualizações constantes</div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn primary">Baixar Agora</button>
+      <button class="btn secondary">Ver Recursos</button>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <!-- COLOCA SUA IMAGEM AQUI -->
+    <img src="SEU_PRINT.png">
+  </div>
+
+</section>
+
+<section class="cards">
   <div class="card">🛡️ Seguro</div>
-</div>
+  <div class="card">⚡ Alta performance</div>
+  <div class="card">⚙️ Configurável</div>
+  <div class="card">🔄 Atualizado</div>
+</section>
 
-<footer>© 2026 Vortex Client</footer>
-
-<script>
-function download() {
-  window.location.href = "https://seulink.com/download.exe";
-}
-</script>
+<footer>
+© 2026 AHK AutoClicker
+</footer>
 
 </body>
 </html>
